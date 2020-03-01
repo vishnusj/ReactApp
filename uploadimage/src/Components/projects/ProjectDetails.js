@@ -13,7 +13,7 @@ const ProjectDetails = (props) => {
                         <span className="card-title">{project.title}</span>
                         <p>{project.content}</p>
                     </div>
-                    <div className="acrd-action gret lighten-4 grey-text">
+                    <div className="card-action gret lighten-4 grey-text">
                         <div>Posted by {project.authorFirstName} {project.authorLastName}}</div>
                         <div>{project.createdAt}</div>
                     </div>
@@ -34,7 +34,7 @@ const mapStateToProps = (state, ownProps) => {
     const projects = state.firestore.data.projects;
     const project = projects ? projects[id] : null;
     return {
-
+        project: project
     }
 }
 
@@ -43,5 +43,5 @@ export default compose(
     firestoreConnect([
         { collection: 'projects' }
     ])
-        (ProjectDetails)
-)
+       
+) (ProjectDetails)
