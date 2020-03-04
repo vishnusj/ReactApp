@@ -37,7 +37,13 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
+
+        <Navbar />
+        <input style={{ display: 'none' }} type="file" onChange={this.fileSelectedHandler}
+            ref={fileInput => this.fileInput = fileInput} />
+          <button onClick={() => this.fileInput.click()}>Pick File</button>
+          <button onClick={this.fileUploadHandler}>Upload Image</button>
+          
           <Switch>
             <Route exact path='/' component={ Dashboard } />
             <Route path='/project/:id' component = {ProjectDetails}/>
@@ -45,10 +51,7 @@ class App extends Component {
             <Route path='/signup' component = {SignUp} />
             <Route path='/createproject' component = {CreateProject} />
           </Switch>
-          <input style={{ display: 'none' }} type="file" onChange={this.fileSelectedHandler}
-            ref={fileInput => this.fileInput = fileInput} />
-          <button onClick={() => this.fileInput.click()}>Pick File</button>
-          <button onClick={this.fileUploadHandler}>Upload Image</button>
+          
         </div>
       </BrowserRouter>
     );
