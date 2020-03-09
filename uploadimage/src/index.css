@@ -9,9 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(/Img/bg_new.jpg) no-repeat;
+  background: url(/uploadimage/public/Img/bg.jpg) no-repeat;
   background-size: 100%;
-  background-position: center;
+  background-position: bottom;
   background-color: #95e8f3;
   min-height: 100%;
 }
