@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { createProject } from '../../store/actions/projectActions';
+import { createProject } from '../../../store/actions/projectActions';
 import { connect } from 'react-redux';
 import { Redirect } from "react-router-dom";
 import axios from 'axios';
