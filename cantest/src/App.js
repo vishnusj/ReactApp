@@ -5,8 +5,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from '../src/Components/View/layout/Navbar';
 import Dashboard from '../src/Components/View/dashboard/Dasboard';
 import ProjectDetails from '../src/Components/Controller/projects/ProjectDetails';
-import SignIn from '../src/Components/Controller/auth/SignIn';
-import SignUp from '../src/Components/Controller/auth/SignUp'
+import SignIn from '../src/Components/View/auth/SignIn';
+import SignUp from '../src/Components/View/auth/SignUp'
 import CreateProject from '../src/Components/Controller/projects/CreateProject';
 
 class App extends Component {
